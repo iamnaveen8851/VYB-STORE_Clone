@@ -53,7 +53,7 @@ const Navbar = () => {
         alignItems={"center"}
         gap={"5%"}
         w={{
-          base: "90%",
+          base: "80%",
           xl: "80%",
         }}
         m={"auto"}
