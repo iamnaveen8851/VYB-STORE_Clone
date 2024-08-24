@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Heading,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -26,6 +27,14 @@ function Footer() {
 
         //  border={"1px solid black"}
       >
+        <Heading fontSize={"26px"} textAlign={"center"} color={"#234E52"}>
+          FREQUENTLY ASKED QUESTIONS
+        </Heading>
+        <Text w={"90%"} m={"auto"} fontWeight={"500"} fontSize={"18px"} color={"#234E52"}>
+          Quick answers to questions you may have. Can’t find what you're
+          looking for? Check out our full documentation
+        </Text>
+        <br />
         <Accordion allowMultiple>
           <AccordionItem
             borderRadius="15px" // Set border radius for the item
@@ -432,7 +441,6 @@ function Footer() {
                         color={"#234E52"}
                         overflow={"hidden"}
                         whiteSpace="normal"
-                        
                       >
                         We didn't find any account with those login credentials?
                       </Text>
