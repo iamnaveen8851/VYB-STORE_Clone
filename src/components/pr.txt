@@ -1,0 +1,15 @@
+ {isHovered && (
+                    <Box
+                      onClick={handleProductsClick}
+                      transition="opacity 0.3s"
+                      mr={isHovered ? "100px" : "40px"}
+                      _hover={{
+                        color: selected === "Product" ? "blue.500" : "black",
+                      }}
+                      ml={"1px"}
+                    >
+                      {selected === "Product" && !isHovered
+                        ? "Creator"
+                        : "Product"}
+                    </Box>
+                  )}
