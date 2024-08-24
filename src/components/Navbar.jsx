@@ -69,7 +69,7 @@ const Navbar = () => {
       >
         {/* Logo and search bar in left box */}
         <Box
-          border={"1px solid red"}
+          // border={"1px solid red"}
           display={"flex"}
           justifyContent={isBelow850px ? "space-between" : "space-around"}
           alignItems={"center"}
@@ -89,23 +89,23 @@ const Navbar = () => {
               base: "40%",
               xl: "auto",
             }}
-            border={"1px solid black"}
+            // border={"1px solid black"}
           >
             <Image
               src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1717142581576x589293308934299500%2FLOGO.gif?w=96&h=58&auto=compress&dpr=1.5&fit=max"
               w={{
                 base: "120px",
-                xl: "90px",
+                xl: "100px",
               }}
               h={{
                 base: "50px",
-                xl: "60px",
+                xl: "54px",
               }}
             />
           </Box>
           {/* Search bar */}
           <Box
-            border={"1px solid black"}
+            // border={"1px solid black"}
             w={{
               base: "100%", // Full width on mobile
               xl: "390px",
@@ -117,7 +117,13 @@ const Navbar = () => {
           >
             <InputGroup p={"5px"}>
               <InputLeftElement pt={"10px"} pointerEvents="none">
-                <SearchIcon color="gray.300" />
+                <SearchIcon
+                  color="black"
+                  h={"60%"}
+                  w={"80%"}
+                  ml={"10%"}
+                  mt={"5%"}
+                />
               </InputLeftElement>
               <Input
                 w={{
@@ -132,7 +138,8 @@ const Navbar = () => {
                 placeholder={isHovered ? "" : placeholder}
                 _hover={{ paddingRight: "120px" }}
                 _placeholder={{
-                  marginRight : "20%"
+                  marginRight: "20%",
+                  marginBottom: "20%",
                 }}
               />
               <InputRightElement
@@ -146,13 +153,13 @@ const Navbar = () => {
                 textDecorationThickness={"15%"}
                 fontWeight={"500"}
                 pt={{
-                  base: "4%",
-                  xl: "3%",
+                  base: "5%",
+                  xl: "2%",
                 }}
               >
                 <Box display={"flex"} alignItems={"center"}>
                   <Box
-                    mr={isHovered ? "5px" : "40px"}
+                    mr={isHovered ? "5px" : "50px"}
                     transition="margin 0.3s"
                     onClick={handleCreatorClick}
                     _hover={{
@@ -191,17 +198,22 @@ const Navbar = () => {
           />
         ) : (
           <Box
-            border={"1px solid black"}
+            // border={"1px solid black"}
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
             gap={"50px"}
             w={"50%"}
+            fontSize={"18px"}
+            color={"rgba(0, 0, 0, 0.92)"}
+            fontWeight={"450"}
           >
             <Link>Fav Creators</Link>
             <Link>Orders</Link>
             <Link>Policies</Link>
-            <Button variant={"none"}>Login</Button>
+            <Button variant={"none"} fontSize={"18px"}>
+              Login
+            </Button>
           </Box>
         )}
       </Box>
