@@ -7,12 +7,12 @@ import {
   Icon,
   Image,
   Input,
-  Link,
+//   Link,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function Signup() {
   return (
     <>
@@ -140,12 +140,14 @@ function Signup() {
             mt={"5%"}
             variant={"none"}
           >
+            <Link to="/verifyId">
             Sign up
+            </Link>
           </Button>
 
           <Text textAlign={"center"} mt={"5%"}>
             Already have an account?{" "}
-            <Link fontSize={"17px"} fontWeight={"540"} color={"#234E52"}>
+            <Link to="/login" fontSize={"17px"} fontWeight={"540"} color={"#234E52"}>
               Login
             </Link>
           </Text>

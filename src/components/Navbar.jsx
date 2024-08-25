@@ -7,7 +7,6 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
-  Link,
   IconButton,
   Drawer,
   DrawerBody,
@@ -29,7 +28,7 @@ import {
   ChevronDownIcon,
 } from "@chakra-ui/icons";
 import { FaBars, FaTimes, FaUser, FaUsers } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function CartIcon() {
   return (
     <>
@@ -158,17 +157,19 @@ const Navbar = () => {
             }}
             // border={"1px solid black"}
           >
-            <Image
-              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1717142581576x589293308934299500%2FLOGO.gif?w=96&h=58&auto=compress&dpr=1.5&fit=max"
-              w={{
-                base: "120px",
-                xl: "100px",
-              }}
-              h={{
-                base: "50px",
-                xl: "54px",
-              }}
-            />
+            <Link to="/">
+              <Image
+                src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1717142581576x589293308934299500%2FLOGO.gif?w=96&h=58&auto=compress&dpr=1.5&fit=max"
+                w={{
+                  base: "120px",
+                  xl: "100px",
+                }}
+                h={{
+                  base: "50px",
+                  xl: "54px",
+                }}
+              />
+            </Link>
           </Box>
           {/* Search bar */}
           <Box
@@ -270,35 +271,40 @@ const Navbar = () => {
             justifyContent={"space-between"}
             alignItems={"center"}
             gap={"50px"}
-            w={"50%"}
+            w={"65%"}
             fontSize={"18px"}
             color={"rgba(0, 0, 0, 0.92)"}
             fontWeight={"450"}
           >
-            <Link
+            <Box
               display={"flex"}
               justifyContent={"space-around"}
               alignItems={"center"}
               gap={"5px"}
             >
-              <CartIcon /> Cart
-            </Link>
-            <Link
+              <CartIcon />
+              <Link>Cart</Link>
+            </Box>
+
+            <Box
               display={"flex"}
               justifyContent={"space-around"}
               alignItems={"center"}
               gap={"5px"}
             >
-              <AboutIcon /> About
-            </Link>
-            <Link
+              <AboutIcon />
+              <Link>About</Link>
+            </Box>
+
+            <Box
               display={"flex"}
               justifyContent={"space-around"}
               alignItems={"center"}
               gap={"5px"}
             >
-              <ContactIcon /> Contact
-            </Link>
+              <ContactIcon />
+              <Link>Contact</Link>
+            </Box>
             <Menu>
               <MenuButton
                 variant={"none"}
@@ -329,7 +335,7 @@ const Navbar = () => {
                   Profile
                 </MenuItem>
                 <MenuItem ml={"35%"} bg={"white"} backdropFilter="blur(10px)">
-                  Login
+                  <Link to="/login"> Login</Link>
                 </MenuItem>
               </MenuList>
             </Menu>
@@ -347,15 +353,15 @@ const Navbar = () => {
         >
           <DrawerCloseButton />
           <DrawerBody m={"auto"} mt={"10%"}>
-            <Link
+            <Box
               display="flex"
               justifyContent={"space-around"}
               alignItems={"center"}
               gap={"5px"}
               mb={4}
             >
-               Contact
-            </Link>
+              <Link>Contact</Link>
+            </Box>
             <Link
               display="flex"
               justifyContent={"space-around"}
@@ -363,7 +369,7 @@ const Navbar = () => {
               gap={"10px"}
               mb={4}
             >
-               Cart
+              Cart
             </Link>
             <Link
               display="flex"
@@ -376,7 +382,7 @@ const Navbar = () => {
             </Link>
 
             <Button variant={"none"} display="block">
-              Login
+              <Link to="/login">Login</Link>
             </Button>
           </DrawerBody>
         </DrawerContent>

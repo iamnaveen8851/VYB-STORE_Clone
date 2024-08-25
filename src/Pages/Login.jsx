@@ -11,16 +11,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-
+import {Link} from "react-router-dom"
 function Login() {
   return (
     <>
-
       <Box
-      
         display={"flex"}
         w={"90%"}
-       
         justifyContent={"space-around"}
         alignItems={"center"}
         gap={"1px"}
@@ -30,38 +27,41 @@ function Login() {
           xl: "row",
         }}
       >
-        <Box display={{
-            base : "none",
-            md :"none",
-            xl : "block"
-        }}  margin={"auto"}>
+        <Box
+          display={{
+            base: "none",
+            md: "none",
+            xl: "block",
+          }}
+          margin={"auto"}
+        >
           <Image w={"490px"} src="photo.png" />
         </Box>
 
         <Box
-        border={{
-            base :"1px solid black",
-            md : "none",
-            xl : "none"
-        }}
-        p={{
+          border={{
+            base: "1px solid black",
+            md: "none",
+            xl: "none",
+          }}
+          p={{
             base: "10px",
-            md : "0",
-            xl : "0"
-        }}
+            md: "0",
+            xl: "0",
+          }}
           w={{
             base: "100%",
-            md : "90%",
+            md: "90%",
             xl: "28%",
           }}
           m={"auto"}
           mt={{
             base: "10%",
-            xl : "0%"
+            xl: "0%",
           }}
-           borderRadius={{
+          borderRadius={{
             base: "15px",
-            md : "15px",
+            md: "15px",
             xl: "0",
           }}
         >
@@ -145,13 +145,12 @@ function Login() {
             bg={"#234E52"}
             color={"#E5F0F1"}
           >
-            Sign up
+            <Link to="/signup"> Sign up</Link>
           </Button>
         </Box>
       </Box>
       <br />
       <br />
-      
     </>
   );
 }
