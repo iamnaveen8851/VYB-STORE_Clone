@@ -60,7 +60,7 @@ const Navbar = () => {
         m={"auto"}
         mt={"1%"}
         position={"sticky"}
-        top={0}
+        top={"3%"}
         zIndex={10}
         bg={"rgba(0, 0, 0, 0.06)"}
         backdropFilter="blur(10px)" // Apply blur effect
