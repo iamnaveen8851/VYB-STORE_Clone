@@ -56,10 +56,12 @@ const Navbar = () => {
           base: "80%",
           xl: "80%",
         }}
+
         m={"auto"}
         mt={"1%"}
         position={"sticky"}
         top={0}
+        zIndex={10}
         bg={"rgba(0, 0, 0, 0.06)"}
         backdropFilter="blur(10px)" // Apply blur effect
         boxShadow={"sm"}
