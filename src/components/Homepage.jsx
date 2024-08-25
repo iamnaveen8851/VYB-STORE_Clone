@@ -1,5 +1,8 @@
-import { Box, Image, useMediaQuery } from "@chakra-ui/react";
+import { Box, Heading, Image, useMediaQuery } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function Homepage() {
   const videoRef = useRef(null);
@@ -13,6 +16,23 @@ function Homepage() {
 
     return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
   }, []);
+
+  const sliderArr = [
+    "https://9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io/f1717430860528x101699210282570000/Final%202nd%20section%20WEB%20%281%29.gif?ignore_imgix=true",
+    "https://9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io/f1717430860528x101699210282570000/Final%202nd%20section%20WEB%20%281%29.gif?ignore_imgix=true",
+    "https://9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io/f1717430860528x101699210282570000/Final%202nd%20section%20WEB%20%281%29.gif?ignore_imgix=true",
+    "https://9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io/f1717430860528x101699210282570000/Final%202nd%20section%20WEB%20%281%29.gif?ignore_imgix=true",
+  ];
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    arrows: false,
+  };
   return (
     <>
       <Box>
@@ -29,12 +49,139 @@ function Homepage() {
           </video>
         )}
       </Box>
-      <Box border={"1px solid black"} w={"80%"} m={"auto"}></Box>
+      <Box
+        // border={"1px solid black"}
+        borderRadius={"30px"}
+        boxShadow={"2xl"}
+        w={{
+          base: "90%",
+          xl: "70%",
+        }}
+        m={"auto"}
+        p={"10px"}
+        display={"grid"}
+        gridTemplateColumns={{
+          base: "repeat(2,1fr)",
+          xl: "repeat(4,1fr)",
+          "2xl": "repeat(4,1fr)",
+        }}
+        justifyContent={"space-around"}
+        alignItems={"center"}
+        gap={"10px"}
+      >
+        <Box
+          display={"grid"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={"auto"}
+        >
+          <Box m={"auto"}>
+            <Image
+              // ml={"25%"}
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1723129049845x104455195830874600%2Fbe28d803d9a96aa3f39ac979f9f7a3c0%25201.png?w=128&h=128&auto=compress&dpr=1.5&fit=max"
+              alt=""
+            />
+          </Box>
+          <Box m={"auto"}>
+            <Heading fontSize={"28px"} textAlign={"center"}>
+              Travel Itinerary
+            </Heading>
+          </Box>
+        </Box>
 
-      {/* Testing  */}
-      <Box></Box>
+        <Box
+          display={"grid"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={"auto"}
+        >
+          <Box m={"auto"}>
+            <Image
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1723129676236x902614560996062500%2Fc3f406dbad6bc39dc9f6a972791246b3%25201.png?w=128&h=143&auto=compress&dpr=1.5&fit=max"
+              alt=""
+            />
+          </Box>
+
+          <Box>
+            <Heading fontSize={"28px"} textAlign={"center"}>
+              Custom Merchandise
+            </Heading>
+          </Box>
+        </Box>
+
+        <Box
+          display={"grid"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={"auto"}
+        >
+          <Box m={"auto"}>
+            <Image
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1723129685688x205809444570131070%2F2a357d982060aa48621b1408be897e98%25201.png?w=128&h=129&auto=compress&dpr=1.5&fit=max"
+              alt=""
+            />
+          </Box>
+
+          <Box>
+            <Heading fontSize={"28px"} textAlign={"center"}>
+              Digital Content
+            </Heading>
+          </Box>
+        </Box>
+
+        <Box
+          display={"grid"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={"auto"}
+        >
+          <Box m={"auto"}>
+            <Image
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F9fd5aba8692d70cefef4b3581c1daecf.cdn.bubble.io%2Ff1723129740866x257181271145942000%2Ffdf29691d85e224cc6ddd59f8b6392fb%25201.png?w=128&h=97&auto=compress&dpr=1.5&fit=max"
+              alt=""
+            />
+          </Box>
+
+          <Box>
+            <Heading fontSize={"28px"} textAlign={"center"}>
+              Fashion Brand
+            </Heading>
+          </Box>
+        </Box>
+      </Box>
+
+      <br />
 
       {/* Slider */}
+      <Box
+        w={{
+          base: "100%",
+          xl: "100%",
+        }}
+      >
+        {/* Slider */}
+        <Slider {...settings}>
+          {sliderArr.map((slider, i) => (
+            <Box key={i}>
+              <Image
+                w={{
+                  base: "100%",
+                  "2xl": "90vh",
+                }}
+                h={{
+                  base: "30vh",
+                  md: "40vh",
+                  lg: "50vh",
+                  xl: "100vh",
+                  "2xl": "auto",
+                }}
+                src={slider}
+                alt=""
+              />
+            </Box>
+          ))}
+        </Slider>
+      </Box>
 
       {/* Ṣign up icons svg add photos from drive */}
       <Box
@@ -77,7 +224,7 @@ function Homepage() {
 
       {/* calculator */}
       <Box>
-        <svg
+        {/* <svg
           width="100%"
           height="763"
           viewBox="0 0 1440 763"
@@ -855,7 +1002,7 @@ function Homepage() {
               />
             </filter>
           </defs>
-        </svg>
+        </svg> */}
       </Box>
     </>
   );
