@@ -2,13 +2,17 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 
 function App() {
   return (
     <>
-    {/* Hello */}
+      {/* Hello */}
       <Navbar />
-      <Homepage />
+      {/* <Homepage /> */}
+      {/* <Login /> */}
+      <Signup />
       <Footer />
     </>
   );
