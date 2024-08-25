@@ -17,8 +17,18 @@ import {
   useDisclosure,
   useMediaQuery,
   DrawerCloseButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
-import { SearchIcon, HamburgerIcon } from "@chakra-ui/icons";
+import {
+  SearchIcon,
+  HamburgerIcon,
+  Icon,
+  ChevronDownIcon,
+} from "@chakra-ui/icons";
+import { FaBars, FaTimes, FaUser, FaUsers } from "react-icons/fa";
 
 const Navbar = () => {
   const [placeholder, setPlaceholder] = useState("Search Creator");
@@ -56,7 +66,6 @@ const Navbar = () => {
           base: "80%",
           xl: "80%",
         }}
-
         m={"auto"}
         mt={"1%"}
         position={"sticky"}
@@ -210,12 +219,40 @@ const Navbar = () => {
             color={"rgba(0, 0, 0, 0.92)"}
             fontWeight={"450"}
           >
-            <Link>Fav Creators</Link>
-            <Link>Orders</Link>
-            <Link>Policies</Link>
-            <Button variant={"none"} fontSize={"18px"}>
-              Login
-            </Button>
+            <Link>Cart</Link>
+            <Link>About</Link>
+            <Link>Contact</Link>
+            <Menu>
+              <MenuButton
+                variant={"none"}
+                backdropFilter="blur(7px)"
+                border={"1px solid black"}
+                borderRadius={"20px"}
+                as={Button}
+                rightIcon={<ChevronDownIcon />}
+              >
+                <Icon
+                  boxSize={5}
+                  bg={"white"}
+                  p={"2px"}
+                  borderRadius={"10px"}
+                  variant="none"
+                  as={FaUser}
+                />
+              </MenuButton>
+              <MenuList
+                borderRadius={"20px"}
+                bg={"rgba(0, 0, 0, 0.05)"}
+                mt={"4%"}
+              >
+                <MenuItem bg={"none"} backdropFilter="blur(10px)">
+                  Profile
+                </MenuItem>
+                <MenuItem bg={"none"} backdropFilter="blur(10px)">
+                  Login
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Box>
         )}
       </Box>
