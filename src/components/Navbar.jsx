@@ -227,28 +227,31 @@ const Navbar = () => {
                 variant={"none"}
                 backdropFilter="blur(7px)"
                 border={"1px solid black"}
-                borderRadius={"20px"}
+                borderRadius={"10px"}
+                bg={"#FFFFFF"}
                 as={Button}
                 rightIcon={<ChevronDownIcon />}
               >
                 <Icon
                   boxSize={5}
-                  bg={"white"}
+                  bg={"grey"}
                   p={"2px"}
                   borderRadius={"10px"}
+                  color="white"
                   variant="none"
                   as={FaUser}
                 />
               </MenuButton>
               <MenuList
-                borderRadius={"20px"}
-                bg={"rgba(0, 0, 0, 0.05)"}
-                mt={"4%"}
+                borderRadius={"5px"}
+                bg={"#FFFFFF"}
+                mt={"-3%"}
+                ml={"20%"}
               >
-                <MenuItem bg={"none"} backdropFilter="blur(10px)">
+                <MenuItem ml={"35%"} bg={"white"} backdropFilter="blur(10px)">
                   Profile
                 </MenuItem>
-                <MenuItem bg={"none"} backdropFilter="blur(10px)">
+                <MenuItem ml={"35%"} bg={"white"} backdropFilter="blur(10px)">
                   Login
                 </MenuItem>
               </MenuList>
@@ -268,13 +271,13 @@ const Navbar = () => {
           <DrawerCloseButton />
           <DrawerBody m={"auto"} mt={"10%"}>
             <Link display="block" mb={4}>
-              Fav Creators
+              Cart
             </Link>
             <Link display="block" mb={4}>
-              Orders
+              About
             </Link>
             <Link display="block" mb={4}>
-              Policies
+              Contact
             </Link>
             <Button variant={"none"} display="block">
               Login
