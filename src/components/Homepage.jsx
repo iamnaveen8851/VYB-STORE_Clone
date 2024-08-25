@@ -37,22 +37,38 @@ function Homepage() {
       {/* Slider */}
 
       {/* Ṣign up icons svg add photos from drive */}
-      <Box display={"flex"} justifyContent={"space-around"}
-      // alignItems={"center"}
-      m={"auto"}
-      w={"90%"}
-
+      <Box
+        display={"flex"}
+        justifyContent={"space-around"}
+        m={"auto"}
+        w={"90%"}
+        flexDirection={{
+          base: "column",
+          sm: "column",
+          md: "row",
+          lg: "row",
+          xl: "row",
+          "2xl": "row",
+        }}
       >
-        
         <Box
           h={"500px"}
+          display={{
+            base: "none",
+            sm: "none",
+            md: "block",
+            lg: "block",
+            xl: "block",
+            "2xl": "block",
+          }}
           // border={"1px solid black"}
           position={"sticky"}
           top={"0"}
           pl={"5%"}
+
           // bottom={"100%"}
         >
-          <Image  w={"400px"}  src="Frame-left.png" alt="" />
+          <Image w={"400px"} src="Frame-left.png" alt="" />
         </Box>
         <Box>
           <Image src="Frame-right.png" alt="" />
