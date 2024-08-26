@@ -55,10 +55,10 @@ function Homepage() {
         boxShadow={"2xl"}
         w={{
           base: "90%",
-          xl: "70%",
+          xl: "75%",
         }}
         m={"auto"}
-        p={"10px"}
+        p={"5px"}
         display={"grid"}
         gridTemplateColumns={{
           base: "repeat(2,1fr)",
@@ -172,7 +172,7 @@ function Homepage() {
                   base: "30vh",
                   md: "40vh",
                   lg: "50vh",
-                  xl: "100vh",
+                  xl: "120vh",
                   "2xl": "auto",
                 }}
                 src={slider}
