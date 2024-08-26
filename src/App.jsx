@@ -13,12 +13,16 @@ function App() {
     <>
       {/* Hello */}
       <Navbar />
-      <AllRoutes/>
+      <AllRoutes />
       {/* <Homepage /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
       {/* <Verify/> */}
       {/* <VerifySuccess/> */}
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   );
