@@ -211,7 +211,6 @@ const Navbar = () => {
                 }}
               />
               <InputRightElement
-               
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 _hover={{
@@ -223,8 +222,8 @@ const Navbar = () => {
                 fontWeight={"500"}
                 pt={{
                   base: "3%",
-                  md : "3%",
-                  lg : "3%",
+                  md: "3%",
+                  lg: "3%",
                   xl: "2%",
                 }}
               >
@@ -368,24 +367,24 @@ const Navbar = () => {
             >
               <Link>Contact</Link>
             </Box>
-            <Link
-              display="flex"
-              justifyContent={"space-around"}
-              alignItems={"center"}
-              gap={"10px"}
-              mb={4}
-            >
-              Cart
-            </Link>
-            <Link
+            <Box
               display="flex"
               justifyContent={"space-around"}
               alignItems={"center"}
               gap={"5px"}
               mb={4}
             >
-              About
-            </Link>
+              <Link>Cart</Link>
+            </Box>
+            <Box
+              display="flex"
+              justifyContent={"space-around"}
+              alignItems={"center"}
+              gap={"10px"}
+              mb={4}
+            >
+              <Link>About</Link>
+            </Box>
 
             <Button variant={"none"} display="block">
               <Link to="/login">Login</Link>
