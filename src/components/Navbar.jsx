@@ -222,7 +222,9 @@ const Navbar = () => {
                 textDecorationThickness={"15%"}
                 fontWeight={"500"}
                 pt={{
-                  base: "5%",
+                  base: "3%",
+                  md : "3%",
+                  lg : "3%",
                   xl: "2%",
                 }}
               >
