@@ -189,7 +189,7 @@ const Navbar = () => {
                   color="black"
                   h={"60%"}
                   w={"80%"}
-                  ml={"10%"}
+                  ml={"14%"}
                   mt={"5%"}
                 />
               </InputLeftElement>
@@ -211,6 +211,7 @@ const Navbar = () => {
                 }}
               />
               <InputRightElement
+               
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 _hover={{
@@ -263,6 +264,9 @@ const Navbar = () => {
             variant="outline"
             onClick={onOpen}
             ml="auto"
+            mb={"3%"}
+            fontSize="30px" // Increase the font size of the icon
+            boxSize="45px"
           />
         ) : (
           <Box
