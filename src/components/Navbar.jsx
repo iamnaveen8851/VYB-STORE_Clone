@@ -222,7 +222,7 @@ const Navbar = () => {
                 fontWeight={"500"}
                 pt={{
                   base: "3%",
-                  md: "3%",
+                  md: "2.5%",
                   lg: "3%",
                   xl: "2%",
                 }}
@@ -265,7 +265,12 @@ const Navbar = () => {
             variant="outline"
             onClick={onOpen}
             ml="auto"
-            mb={"3%"}
+            mb={{
+              base: "1%",
+              md : "0.4%",
+              lg : "0.5%",
+              xl: "3%",
+            }}
             fontSize="30px" // Increase the font size of the icon
             boxSize="45px"
           />
