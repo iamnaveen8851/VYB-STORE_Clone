@@ -4,15 +4,13 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  Icon,
   Image,
   Input,
-//   Link,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 function Signup() {
   return (
     <>
@@ -25,45 +23,51 @@ function Signup() {
         m={"auto"}
         flexDirection={{
           base: "column",
-          xl: "row",
+          md: "row",
         }}
       >
         <Box
           display={{
             base: "none",
-            md: "none",
-            xl: "block",
+            md: "block",
+          }}
+          w={{
+            md: "45%",
+            lg: "50%",
           }}
           margin={"auto"}
         >
-          <Image w={"490px"} src="photo.png" />
+          <Image
+            w={"100%"}
+            src="photo.png"
+            objectFit="cover"
+            borderRadius="8px"
+          />
         </Box>
 
         <Box
           border={{
             base: "1px solid black",
             md: "none",
-            xl: "none",
           }}
           p={{
             base: "10px",
-            md: "0",
-            xl: "0",
           }}
           w={{
             base: "100%",
-            md: "90%",
-            xl: "28%",
+            md: "45%",
+            lg: "35%",
+            xl: "30%",
           }}
           m={"auto"}
           mt={{
             base: "10%",
-            xl: "0%",
+            md: "4%",
+            lg: "2%",
           }}
           borderRadius={{
             base: "15px",
-            md : "15px",
-            xl: "0",
+            md: "15px",
           }}
         >
           <Heading textAlign={"center"}>Signup</Heading>
@@ -140,14 +144,17 @@ function Signup() {
             mt={"5%"}
             variant={"none"}
           >
-            <Link to="/verifyId">
-            Sign up
-            </Link>
+            <Link to="/verifyId">Sign up</Link>
           </Button>
 
           <Text textAlign={"center"} mt={"5%"}>
             Already have an account?{" "}
-            <Link to="/login" fontSize={"17px"} fontWeight={"540"} color={"#234E52"}>
+            <Link
+              to="/login"
+              fontSize={"17px"}
+              fontWeight={"540"}
+              color={"#234E52"}
+            >
               Login
             </Link>
           </Text>

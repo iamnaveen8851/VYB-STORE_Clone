@@ -11,7 +11,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
 function Login() {
   return (
     <>
@@ -24,69 +25,46 @@ function Login() {
         m={"auto"}
         flexDirection={{
           base: "column",
-          md : "row",
-          lg : "row",
-          xl: "row",
-          "2xl" :"row"
+          md: "row",
         }}
       >
         <Box
           display={{
             base: "none",
             md: "block",
-            lg : "block",
-            xl: "block",
-
           }}
           w={{
-            base : "0",
-            sm : "0",
-            md : "50%",
-            lg : "50%",
-            xl  : "50%",
-
+            md: "45%",
+            lg: "50%",
           }}
           m={"auto"}
-          // border={"5px solid black"}
         >
-          <Image w={{
-            base : "50%",
-            sm : "100%",
-            md : "100%",
-            lg : "100%",
-            xl : "100%",
-            "2xl" : "100%"
-          }}  src="photo.png" />
+          <Image w={"100%"} objectFit="cover" src="photo.png" />
         </Box>
 
         <Box
           border={{
             base: "1px solid black",
             md: "none",
-            xl: "none",
           }}
           p={{
             base: "10px",
-            md: "0",
-            xl: "0",
           }}
           w={{
             base: "100%",
             md: "40%",
-            lg : "35%",
+            lg: "35%",
             xl: "30%",
           }}
           m={"auto"}
           mt={{
             base: "10%",
-            md : "4%",
-            lg : "2%",
-            xl: "0%",
+            md: "4%",
+            lg: "2%",
           }}
           borderRadius={{
             base: "15px",
             md: "15px",
-            xl: "0",
           }}
         >
           <Heading textAlign={"center"}>Login</Heading>
@@ -141,7 +119,6 @@ function Login() {
               placeholder="Enter password"
             />
           </FormControl>
-          {/* <br /> */}
           <Button
             w={"42%"}
             borderRadius={"20px"}
@@ -153,10 +130,8 @@ function Login() {
           >
             Login
           </Button>
-          {/* <br /> */}
           <Text textAlign={"center"} mt={"5%"} color={"#838383"}>
-            {" "}
-            ---- Don't Have account? ----
+            ---- Don't Have an account? ----
           </Text>
 
           <Button
