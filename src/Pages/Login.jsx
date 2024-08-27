@@ -46,12 +46,12 @@ function Login() {
             xl  : "50%",
 
           }}
-          margin={"auto"}
+          m={"auto"}
           // border={"5px solid black"}
         >
           <Image w={{
             base : "50%",
-            sm : "50%",
+            sm : "100%",
             md : "100%",
             lg : "100%",
             xl : "100%",
