@@ -24,18 +24,39 @@ function Login() {
         m={"auto"}
         flexDirection={{
           base: "column",
+          md : "row",
+          lg : "row",
           xl: "row",
+          "2xl" :"row"
         }}
       >
         <Box
           display={{
             base: "none",
-            md: "none",
+            md: "block",
+            lg : "block",
             xl: "block",
+
+          }}
+          w={{
+            base : "0",
+            sm : "0",
+            md : "50%",
+            lg : "50%",
+            xl  : "50%",
+
           }}
           margin={"auto"}
+          // border={"5px solid black"}
         >
-          <Image w={"490px"} src="photo.png" />
+          <Image w={{
+            base : "50%",
+            sm : "50%",
+            md : "100%",
+            lg : "100%",
+            xl : "100%",
+            "2xl" : "100%"
+          }}  src="photo.png" />
         </Box>
 
         <Box
@@ -51,12 +72,15 @@ function Login() {
           }}
           w={{
             base: "100%",
-            md: "90%",
-            xl: "28%",
+            md: "40%",
+            lg : "35%",
+            xl: "30%",
           }}
           m={"auto"}
           mt={{
             base: "10%",
+            md : "4%",
+            lg : "2%",
             xl: "0%",
           }}
           borderRadius={{
