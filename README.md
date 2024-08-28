@@ -1,4 +1,6 @@
- Tech Stack:
+# VYB-Store-Clone
+ 
+## Tech Stack:
    - React
    - Chakra-ui
    - React-router-dom
