@@ -1,0 +1,27 @@
+.custom-select {
+  appearance: none; /* Remove default arrow in most browsers */
+  background: none; /* Remove default background */
+  border: 1px solid grey; /* Custom border */
+  padding-right: 2.5rem; /* Space for the arrow if needed */
+  font-size: 15px;
+}
+
+/* Hide default arrow in Internet Explorer and Edge */
+.custom-select::-ms-expand {
+  display: none;
+}
+
+/* Optional: Add a custom arrow if needed */
+.custom-select::after {
+  content: ""; /* Custom content or styling */
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: solid grey;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}

@@ -267,8 +267,8 @@ const Navbar = () => {
             ml="auto"
             mb={{
               base: "1%",
-              md : "0.4%",
-              lg : "0.5%",
+              md: "0.4%",
+              lg: "0.5%",
               xl: "3%",
             }}
             fontSize="30px" // Increase the font size of the icon
@@ -342,7 +342,7 @@ const Navbar = () => {
                 ml={"20%"}
               >
                 <MenuItem ml={"35%"} bg={"white"} backdropFilter="blur(10px)">
-                  Profile
+                  <Link to="/profile" > Profile</Link>
                 </MenuItem>
                 <MenuItem ml={"35%"} bg={"white"} backdropFilter="blur(10px)">
                   <Link to="/login"> Login</Link>
