@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import Footer from '../components/Footer'
 function Homepage() {
   const videoRef = useRef(null);
   const [isMobile] = useMediaQuery("(max-width: 850px)");
@@ -1004,8 +1004,8 @@ function Homepage() {
           </defs>
         </svg> */}
       </Box>
-      
-     
+
+      <Footer/>
     </>
   );
 }

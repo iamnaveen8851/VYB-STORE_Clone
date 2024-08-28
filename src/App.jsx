@@ -1,6 +1,6 @@
 import "./App.css";
 import AllRoutes from "./components/AllRoutes";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 import Login from "./Pages/Login";
@@ -23,7 +23,7 @@ function App() {
       <br />
       <br />
       <br />
-      <Footer />
+     
     </>
   );
 }

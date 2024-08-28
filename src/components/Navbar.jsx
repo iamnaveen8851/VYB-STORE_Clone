@@ -326,6 +326,7 @@ const Navbar = () => {
                 rightIcon={<ChevronDownIcon />}
               >
                 <Icon
+                
                   boxSize={5}
                   bg={"grey"}
                   p={"2px"}
